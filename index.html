@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>بوت الديسكورد DZzAx</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/background.jpg') center center / cover no-repeat;
+      z-index: -2;
+      opacity: 0.9;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    h1 {
+      color: #00ff15;
+      margin-top: 2rem;
+    }
+
+    .status {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #ffcc00;
+    }
+
+    .info {
+      margin-top: 2rem;
+      padding: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .discord {
+      background: #5865F2;
+    }
+
+    .discord:hover {
+      background: #4752c4;
+    }
+
+    .youtube {
+      background: #FF0000;
+    }
+
+    .youtube:hover {
+      background: #cc0000;
+    }
+
+    .subscribe {
+      background: #00c853;
+    }
+
+    .subscribe:hover {
+      background: #009624;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+      color: #ffffff;
+    }
+
+    #disqus_thread {
+      margin: 3rem auto;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 1rem;
+      color: #ccc;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-top: 1px solid rgba(255, 255, 255, 0);
+    }
+  </style>
+</head>
+<body>
+  <h1>🤖 مرحباً بك في بوت DZzAx</h1>
+  <p class="status">البوت شغال ✅</p>
+
+  <div class="info">
+    <p><strong>📛 اسم البوت:</strong> DZzAx BOT</p>
+    <p><strong>🌐 عدد السيرفرات:</strong> +50</p>
+
+    <a href="https://discord.com/api/oauth2/authorize?client_id=1360975391388471316&permissions=8&integration_type=0&scope=bot" class="btn discord" target="_blank">
+      🚀 أضف البوت إلى سيرفرك
+    </a>
+    <a href="https://www.youtube.com/@dzzax" class="btn youtube" target="_blank">
+      📺 قناتي على اليوتيوب
+    </a>
+    <a href="#" class="btn subscribe">
+      🔔 اشترك في تنبيهات البوت
+    </a>
+
+    <h2>📋 أوامر البوت:</h2>
+    <ul>
+      <li>/ping - اختبار اتصال البوت</li>
+      <li>/deleteone - حذف رسالة واحدة من عضو</li>
+      <li>/deleteall - حذف كل رسائل عضو</li>
+      <li>/deletebotmessages - حذف كل رسائل البوت</li>
+      <li>/clearallmessages - حذف كل رسائل الغرفة الحالية</li>
+      <li>/refreshstatus - تحديث حالة البوت</li>
+      <li>/ask - سؤال الذكاء الاصطناعي</li>
+      <li>/subscribe - الاشتراك في تنبيهات خاصة</li>
+    </ul>
+
+    <h2>💬 آراء الزوار:</h2>
+    <div id="disqus_thread"></div>
+  </div>
+
+  <script>
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = "dzbot-page";
+    };
+
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://YOUR_SHORTNAME_HERE.disqus.com/embed.js'; 
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>يرجى تفعيل الجافاسكربت لعرض التعليقات.</noscript>
+
+  <footer>
+    جميع الحقوق محفوظة © 2025 - DZzAx BOT
+  </footer>
+</body>
+</html>
